@@ -27,32 +27,43 @@ export default function FeedbackForm() {
       try {
         setAnalyzing(true);
 
-        const res = await fetch("http://localhost:5000/api/ai/feedback-insights", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ text: message }),
-        });
+        const res = await fetch(
+          "https://assignment1-red-mu.vercel.app/api/ai/feedback-insights",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: message }),
+          }
+        );
 
         const data = await res.json();
+
+        // guard against backend error
+        if (data?.error) {
+          setInsights(null);
+          return;
+        }
+
         setInsights(data);
       } catch (err) {
-        console.error("AI error:", err);
+        console.error("AI insight error:", err);
+        setInsights(null);
       } finally {
         setAnalyzing(false);
       }
-    }, 800); // ⏱ debounce
+    }, 800);
 
     return () => clearTimeout(timeout);
   }, [message]);
 
-  // 📤 SUBMIT FEEDBACK
+  // ✅ SUBMIT FEEDBACK
   const submitFeedback = async () => {
     if (!message.trim()) return;
 
     setSubmitting(true);
 
     try {
-      await fetch("http://localhost:5000/api/feedback", {
+      await fetch("https://assignment1-red-mu.vercel.app/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -62,8 +73,11 @@ export default function FeedbackForm() {
         }),
       });
 
+      // reset form
       setMessage("");
       setInsights(null);
+    } catch (err) {
+      console.error("Submit error:", err);
     } finally {
       setSubmitting(false);
     }
