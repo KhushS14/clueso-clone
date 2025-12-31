@@ -29,6 +29,8 @@ This project features a responsive UI,interactive dashboard, feedback tools, and
 
  🧱 Architecture Overview:
 
+ Full stack app flowchart.png
+
 
 ⚙️ Installation
 
@@ -59,6 +61,7 @@ npm run dev
 
 
   
+
 
 
 
