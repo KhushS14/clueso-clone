@@ -61,8 +61,9 @@ export default function Auth() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-6">
-      <div className="w-full max-w-md">
+      <div className="max-w-md w-full mx-auto">
+       <div className="bg-background border border-border rounded-2xl shadow-xl p-8">
+
         {/* Back Link */}
         <Link
           to="/"
