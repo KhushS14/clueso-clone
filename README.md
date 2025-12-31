@@ -72,64 +72,63 @@ On submit → Feedback added to Dashboard state
 
  Assignment1/
 │
-├── backend/                     # Backend (Node.js + Express)
-│   ├── controllers/             # Request handling logic
+├── backend/                          # Backend (Node.js + Express)
+│   ├── controllers/                 # Request handling logic
 │   │   └── feedback.controller.js
 │   │
-│   ├── routes/                  # API route definitions
+│   ├── routes/                      # API route definitions
 │   │   └── feedback.routes.js
 │   │
-│   ├── services/                # Business logic / AI service calls
+│   ├── services/                    # Business logic / AI service calls
 │   │   └── groq.service.js
 │   │
-│   ├── middleware/              # Custom middleware (auth, error handling)
+│   ├── middleware/                  # Custom middleware (auth, error handling)
 │   │   └── error.middleware.js
 │   │
-│   ├── config/                  # Environment & app configuration
+│   ├── config/                      # Environment & app configuration
 │   │   └── env.js
 │   │
-│   ├── server.js                # Express app entry point
-│   └── package.json             # Backend dependencies
+│   ├── server.js                    # Express app entry point
+│   └── package.json                 # Backend dependencies
 │
-├── frontend/                    # Frontend (React + TypeScript + Vite)
-│   ├── public/                  # Static assets
+├── frontend/                         # Frontend (React + TypeScript + Vite)
+│   ├── public/                      # Static assets
 │   │   └── thumbnails/
 │   │
 │   ├── src/
-│   │   ├── components/          # Reusable UI components
-│   │   │   ├── ui/              # Buttons, Cards, Inputs
-│   │   │   ├── dashboard/       # Dashboard-specific components
-│   │   │   └── feedback/        # Feedback form & list
+│   │   ├── components/              # Reusable UI components
+│   │   │   ├── ui/                  # Buttons, Cards, Inputs
+│   │   │   ├── dashboard/           # Dashboard-specific components
+│   │   │   └── feedback/            # Feedback form & list
 │   │   │
-│   │   ├── pages/               # Application pages
+│   │   ├── pages/                   # Application pages
 │   │   │   ├── Login.tsx
 │   │   │   ├── Signup.tsx
 │   │   │   └── Dashboard.tsx
 │   │   │
-│   │   ├── services/            # API calls (Axios / Fetch)
+│   │   ├── services/                # API calls (Axios / Fetch)
 │   │   │   └── api.ts
 │   │   │
-│   │   ├── hooks/               # Custom React hooks
+│   │   ├── hooks/                   # Custom React hooks
 │   │   │   └── useAuth.ts
 │   │   │
-│   │   ├── layouts/             # Layout components
+│   │   ├── layouts/                 # Layout components
 │   │   │   └── DashboardLayout.tsx
 │   │   │
-│   │   ├── lib/                 # Utility functions
+│   │   ├── lib/                     # Utility functions
 │   │   │   └── utils.ts
 │   │   │
-│   │   ├── App.tsx              # Root component
-│   │   ├── main.tsx             # React entry point
-│   │   └── routes.tsx           # App routing
+│   │   ├── App.tsx                  # Root component
+│   │   ├── main.tsx                 # React entry point
+│   │   └── routes.tsx               # Application routing
 │   │
-│   ├── .env                     # Frontend environment variables
-│   ├── package.json             # Frontend dependencies
-│   └── vite.config.ts           # Vite configuration
+│   ├── .env                         # 🔐 Frontend environment variables
+│   ├── package.json                 # Frontend dependencies
+│   └── vite.config.ts               # Vite configuration
 │
-├── .gitignore                   # Git ignore rules
-├── README.md                    # Project documentation
-└── package.json                 # Root scripts (optional)
-
+├── .gitignore                       # Git ignore rules
+├── README.md                        # Project documentation
+└── package.json                     # Root scripts (optional)
 
 ⚙️ Installation
 
@@ -160,6 +159,7 @@ npm run dev
 
 
   
+
 
 
 
