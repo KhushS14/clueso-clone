@@ -6,6 +6,8 @@ import { Label } from '@/components/ui/label';
 import { Play, Sparkles, ArrowLeft, Mail, Lock, User, Eye, EyeOff } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/contexts/AuthContext';
+import cluesoLogo from "@/assets/clueso-logo.svg";
+
 
 export default function Auth() {
   const location = useLocation();
@@ -72,9 +74,12 @@ export default function Auth() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-gradient-hero flex items-center justify-center">
-              <Play className="w-5 h-5 text-primary-foreground fill-current" />
-            </div>
+           <img
+  src={cluesoLogo}
+  alt="Clueso Logo"
+  className="w-12 h-12"
+/>
+
             <span className="text-2xl font-bold">Clueso</span>
           </Link>
 
