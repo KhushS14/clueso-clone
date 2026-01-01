@@ -27,9 +27,32 @@ This project features a responsive UI,interactive dashboard, feedback tools, and
 ✔ Client-server integration  
 ✔ Modular component design (UI, forms, state, loader)
 
- 🧱 Architecture Overview:
+ 🧱 Project Architecture
+ 
+Assignment1/
+├── backend/                # Server-side application
+│   ├── routes/             # API routes
+│   ├── controllers/        # Request handling & business logic
+│   ├── app.js / index.js   # Express app entry point
+│   └── package.json        # Backend dependencies
+│
+├── frontend/               # Client-side application
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── pages/          # Application pages (Dashboard, etc.)
+│   │   ├── services/       # API calls to backend
+│   │   ├── App.tsx         # Main React component
+│   │   └── main.tsx        # Application entry point
+│   └── package.json        # Frontend dependencies
+│
+├── public/
+│   └── thumbnails/         # Static assets (images/thumbnails)
+│
+├── vercel.json              # Deployment configuration
+├── README.md                # Project documentation
+└── package.json             # Root-level scripts & configs
 
-Assignment/fullstackapp.png
+
 
 ⚙️ Installation
 
@@ -60,6 +83,7 @@ npm run dev
 
 
   
+
 
 
 
